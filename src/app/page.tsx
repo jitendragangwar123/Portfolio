@@ -202,13 +202,14 @@ export default function Home() {
               title="Blockchain Developer (R&D)"
               company="Sustainability Economics, Bangalore, India"
               period="August 2023 - Present"
-              description="Developing cutting-edge blockchain solutions to drive the Net-Zero Transition."
+              description="Developing cutting-edge blockchain solutions to drive the Net-Zero Transition. Empowering industries with sustainable and scalable decentralized technologies."
             />
             <WorkExperience
               title="Blockchain Developer"
               company="GuardianLink, Chennai, India"
               period="July 2022 - July 2023"
-              description="Developed scalable blockchain solutions for NFT platforms and DeFi applications."
+              description="
+Developed scalable blockchain solutions for NFT platforms and DeFi applications. Pioneered innovative smart contract designs to enhance security and efficiency."
             />
             <WorkExperience
               title="Research Scholar"
