@@ -678,7 +678,7 @@ function ViewAllDialog({
               key={index}
               className="mb-6 p-4 bg-[rgb(20,20,20)] rounded-xl hover:bg-[rgb(30,30,30)] transition-colors"
             >
-              <h3 className="font-semibold text-lg mb-2">{item.name}</h3>
+              <h3 className="font-semibold text-white text-lg mb-2">{item.name}</h3>
               <p className="text-gray-400 mb-3">{item.description}</p>
               <div className="flex gap-4">
                 {item.github && (
