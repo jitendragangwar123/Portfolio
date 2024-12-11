@@ -295,14 +295,14 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div className="bg-slate-950 p-6 rounded-xl hover:bg-zinc-800/80 transition-all">
-              <h3 className="font-bold text-lg mb-2 text-blue-400">
-                StarkHack Hackathon Winner 🏆
+              <h3 className="font-bold text-lg mb-2 text-red-400">
+                StarkHack Hackathon Winner 🏅
               </h3>
               <p className="text-gray-400 mb-3">
                 Won $8,500 for developing Attest Me, an innovative
                 blockchain-based Attestation Service on Starknet Ecosystem.
               </p>
-              <div className="flex gap-2">
+              <div className="flex gap-4">
                 <a
                   href="https://ethglobal.com/showcase/attest-me-smj4z"
                   target="_blank"
@@ -313,7 +313,7 @@ export default function Home() {
                   <span>ETH Global</span>
                 </a>
                 <a
-                  href="https://github.com/rajeebkm/attestme"
+                  href="https://github.com/rajeebkm/attest-me"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-400 hover:underline flex items-center gap-1"
@@ -322,7 +322,7 @@ export default function Home() {
                   <span>GitHub</span>
                 </a>
                 <a
-                  href="https://attestme.vercel.app/"
+                  href="https://attest-me-chi.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-green-400 hover:underline flex items-center gap-1"
@@ -375,7 +375,7 @@ export default function Home() {
 
             <div className="bg-slate-950 p-6 rounded-xl hover:bg-zinc-800/80 transition-all">
               <h3 className="font-bold text-lg mb-2 text-yellow-400">
-                ETHOnline Hackathon Winner🌟
+                ETHOnline Hackathon Winner 🌟
               </h3>
               <p className="text-gray-400 mb-3">
                 Developed AuraAsset, empowering investments through the
@@ -402,6 +402,45 @@ export default function Home() {
                 </a>
                 <a
                   href="https://aura-asset-front-end.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-400 hover:underline flex items-center gap-1"
+                >
+                  <ExternalLink size={16} />
+                  <span>Demo</span>
+                </a>
+              </div>
+            </div>
+
+            <div className="bg-slate-950 p-6 rounded-xl hover:bg-zinc-800/80 transition-all">
+              <h3 className="font-bold text-lg mb-2 text-blue-400">
+                ETHIndia Hackathon Winner 🏆
+              </h3>
+              <p className="text-gray-400 mb-3">
+                Building LuckyLotto, a seamless blockchain-powered lottery platform revolutionizing the gaming experience,
+                and Won the Pool Prize from Coinbase.
+              </p>
+              <div className="flex gap-4">
+                <a
+                  href="https://devfolio.co/projects/luckylotto-4e8a"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-400 hover:underline flex items-center gap-1"
+                >
+                  <ExternalLink size={16} />
+                  <span>Devfolio</span>
+                </a>
+                <a
+                  href="https://github.com/rajeebkm/luckylotto"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-400 hover:underline flex items-center gap-1"
+                >
+                  <Github size={16} />
+                  <span>GitHub</span>
+                </a>
+                <a
+                  href="https://luckylotto.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-green-400 hover:underline flex items-center gap-1"
@@ -686,6 +725,13 @@ function ViewAllDialog({
 
 const ethereumProjects = [
   {
+    name: "Lucky-Lotto",
+    description:
+      "Seamless Blockchain Powered Betting for Gamers. 🏆 Won the Pool Prize from Coinbase at the ETHIndia 2024 Hackathon for successfully integrating their OnchainKit SDK. 🏆",
+    github: "https://github.com/rajeebkm/luckylotto",
+    live: "https://luckylotto.vercel.app/",
+  },
+  {
     name: "Aura-Asset",
     description:
       "Empowering Investments Through Tokenization of Real-World Assets. 🏆 Won the Pool Prize from Sign Protocol at the ETHOnline 2024 Hackathon for successfully integrating their attestation service. 🏆",
@@ -741,8 +787,8 @@ const starknetProjects = [
     name: "Attest-Me",
     description:
       "Attest Me provides a secure, transparent, and decentralized solution for creating, managing, and verifying attestations across various industries.🏆 Secured the second prize at StarkHack 2024 Hackathon for the best use of Starknet, along with a pool prize for leveraging Dynamics. 🏆",
-    github: "https://github.com/rajeebkm/attestme",
-    live: "https://attestme.vercel.app/",
+    github: "https://github.com/rajeebkm/attest-me",
+    live: "https://attest-me-chi.vercel.app/",
   },
   {
     name: "Starknet-Counter-Workshop",
