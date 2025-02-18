@@ -19,14 +19,19 @@ import DiamanteBg from "@/assets/tech-bg/diamante-bg.jpg";
 import EthereumBg from "@/assets/tech-bg/ethereum-bg.jpg";
 import StarknetBg from "@/assets/tech-bg/starknet-bg.jpg";
 import StellarBg from "@/assets/tech-bg/stellar-bg.jpg";
+import BaseBg from "@/assets/tech-bg/base-bg.png";
+import SeiBg from "@/assets/tech-bg/sei-bg.png";
 
-type CardVariant = "ethereum" | "starknet" | "diamante" | "stellar" | "default";
+type CardVariant = "ethereum" | "starknet" | "diamante" | "stellar" | "base" | "sei" | "default";
 
 export default function Home() {
   const [ethereumDialogOpen, setEthereumDialogOpen] = React.useState(false);
   const [starknetDialogOpen, setStarknetDialogOpen] = React.useState(false);
   const [diamanteDialogOpen, setDiamanteDialogOpen] = React.useState(false);
   const [stellarDialogOpen, setStellarDialogOpen] = React.useState(false);
+  const [baseDialogOpen, setBaseDialogOpen] = React.useState(false);
+  const [seiDialogOpen, setSeiDialogOpen] = React.useState(false);
+
   const [certificationsDialogOpen, setCertificationsDialogOpen] =
     React.useState(false);
 
@@ -62,7 +67,7 @@ export default function Home() {
             Hi, I&apos;m Jitendra
           </h1>
           <p className="text-gray-400 text-sm sm:text-base">
-            Blockchain Developer with 2.5+ years of experience in leading and
+            Blockchain Developer with 2.6+ years of experience in leading and
             delivering high-impact projects in DeFi and infrastructure tooling
             with expertise in building secure smart contracts and scalable
             dApps.
@@ -142,7 +147,7 @@ export default function Home() {
         >
           <h2 className="text-xl sm:text-2xl font-bold mb-4">Ethereum</h2>
           <p className="mb-4 text-sm sm:text-base">
-            I&apos;ve been involved with blockchain companies for over 2.5 years
+            I&apos;ve been involved with blockchain companies for over 2.6 years
             as an Ethereum Blockchain Developer.
           </p>
         </Card>
@@ -189,6 +194,36 @@ export default function Home() {
           <p className="mb-4 text-sm sm:text-base">
             For the past 4 months, I&apos;ve been exploring Stellar Blockchain,
             gaining hands-on experience with its decentralized payment system.
+          </p>
+        </Card>
+        {/* Base Blockchain Experience */}
+        <Card
+          className="col-span-1 sm:col-span-2 lg:col-span-1 bg-zinc-900"
+          onClick={() => setBaseDialogOpen(true)}
+          viewAllButton={
+            <ViewAllButton onClick={() => setBaseDialogOpen(true)} />
+          }
+          variant="base"
+        >
+          <h2 className="text-xl sm:text-2xl font-bold mb-4">Base</h2>
+          <p className="mb-4 text-sm sm:text-base">
+            For the past six months, I&apos;ve been exploring the Base Blockchain,
+            gaining practical experience with its blockchain infrastructure.
+          </p>
+        </Card>
+        {/* Sei Blockchain Experience */}
+        <Card
+          className="col-span-1 sm:col-span-2 lg:col-span-1 bg-zinc-900"
+          onClick={() => setSeiDialogOpen(true)}
+          viewAllButton={
+            <ViewAllButton onClick={() => setSeiDialogOpen(true)} />
+          }
+          variant="sei"
+        >
+          <h2 className="text-xl sm:text-2xl font-bold mb-4">Sei</h2>
+          <p className="mb-4 text-sm sm:text-base">
+            In the past month, I&apos;ve been immersing myself in the Sei Blockchain,
+            exploring its innovative financial ecosystem firsthand.
           </p>
         </Card>
 
@@ -483,6 +518,20 @@ Developed scalable blockchain solutions for NFT platforms and DeFi applications.
       />
 
       <ViewAllDialog
+        title="Base Projects"
+        items={baseProjects}
+        open={baseDialogOpen}
+        onOpenChange={setBaseDialogOpen}
+      />
+
+      <ViewAllDialog
+        title="Sei Projects"
+        items={seiProjects}
+        open={seiDialogOpen}
+        onOpenChange={setSeiDialogOpen}
+      />
+
+      <ViewAllDialog
         title="All Certifications"
         items={certifications}
         open={certificationsDialogOpen}
@@ -509,6 +558,8 @@ function Card({
     starknet: StarknetBg,
     diamante: DiamanteBg,
     stellar: StellarBg,
+    base: BaseBg,
+    sei: SeiBg,
     default: null,
   }[variant];
 
@@ -726,18 +777,25 @@ function ViewAllDialog({
 
 const ethereumProjects = [
   {
-    name: "Lucky-Lotto",
-    description:
-      "Seamless Blockchain Powered Betting for Gamers. 🏆 Won the Pool Prize from Coinbase at the ETHIndia 2024 Hackathon for successfully integrating their OnchainKit SDK. 🏆",
-    github: "https://github.com/rajeebkm/luckylotto",
-    live: "https://luckylotto.vercel.app/",
-  },
-  {
     name: "Aura-Asset",
     description:
       "Empowering Investments Through Tokenization of Real-World Assets. 🏆 Won the Pool Prize from Sign Protocol at the ETHOnline 2024 Hackathon for successfully integrating their attestation service. 🏆",
     github: "https://github.com/jitendragangwar123/AuraAsset",
     live: "https://aura-asset-front-end.vercel.app/",
+  },
+  {
+    name: "Peer2Play-Swap",
+    description:
+      "A decentralized liquidity pool that supports custom ERC20 tokens, using a constant product AMM model. Users can add liquidity, remove liquidity, swap tokens, and earn rewards.",
+    github: "https://github.com/jitendragangwar123/Peer2Play-Swap",
+    live: "https://peer2-play-swap.vercel.app/",
+  },
+  {
+    name: "Raffle-Royale",
+    description:
+      "Raffle-Royale is a decentralized game where players stake ETH to enter a raffle, with Chainlink VRF ensuring provably fair winner selection and Chainlink Automation managing seamless and efficient operations.",
+    github: "https://github.com/jitendragangwar123/Raffle-Royale",
+    live: "https://raffle-royale.vercel.app/",
   },
   {
     name: "EquitoX",
@@ -823,6 +881,33 @@ const stellarProjects = [
     github:
       "https://github.com/jitendragangwar123/Building-DeFi-DApp-On-Stellar",
     live: "https://building-defi-dapp-on-stellar-front-end.vercel.app/",
+  },
+];
+
+const baseProjects = [
+  {
+    name: "Lucky-Lotto",
+    description:
+      "Seamless Blockchain Powered Betting for Gamers. 🏆 Won the Pool Prize from Coinbase at the ETHIndia 2024 Hackathon for successfully integrating their OnchainKit SDK. 🏆",
+    github: "https://github.com/rajeebkm/luckylotto",
+    live: "https://luckylotto.vercel.app/",
+  },
+  {
+    name: "BaseAgentX",
+    description:
+      "BaseAgentX is an autonomous AI agent built on Base, leveraging Coinbase Agent Kit, OnchainKit, and EigenLayer AVS to revolutionize real-world asset investment with AI-driven automation. 🧠🤖 Winner of the AgentKit Pool Prize 🏆 in the Agentic Ethereum Hackathon 🏅, hosted by ETHGlobal.",
+    github: "https://github.com/jitendragangwar123/BaseAgentX",
+    live: "https://base-agent-x.vercel.app/",
+  }
+];
+
+const seiProjects = [
+  {
+    name: "SeiAgentPay",
+    description:
+      "Empowering Merchants and Consumers with AI-Driven Crypto Payments for a Frictionless Financial Future.SeiAgentPay is a decentralized stablecoin payment system that allows users to make payments seamlessly using DAI, USDT, and USDC. It integrates an AI-powered recommendation system to suggest the best stablecoin based on transaction history and user behavior, ensuring cost-effective and efficient transactions.",
+    github: "https://github.com/jitendragangwar123/SeiAgentPay",
+    live: "https://sei-agent-pay.vercel.app/",
   },
 ];
 
