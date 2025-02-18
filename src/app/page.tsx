@@ -207,7 +207,7 @@ export default function Home() {
         >
           <h2 className="text-xl sm:text-2xl font-bold mb-4">Base</h2>
           <p className="mb-4 text-sm sm:text-base">
-            For the past six months, I&apos;ve been exploring the Base Blockchain,
+            For the past 8 months, I&apos;ve been exploring the Base Blockchain,
             gaining practical experience with its blockchain infrastructure.
           </p>
         </Card>
@@ -346,7 +346,7 @@ Developed scalable blockchain solutions for NFT platforms and DeFi applications.
                   className="text-green-400 hover:underline flex items-center gap-1"
                 >
                   <ExternalLink size={16} />
-                  <span>ETH Global</span>
+                  <span>ETHGlobal</span>
                 </a>
                 <a
                   href="https://github.com/rajeebkm/attest-me"
@@ -425,7 +425,7 @@ Developed scalable blockchain solutions for NFT platforms and DeFi applications.
                   className="text-green-400 hover:underline flex items-center gap-1"
                 >
                   <ExternalLink size={16} />
-                  <span>ETH Global</span>
+                  <span>ETHGlobal</span>
                 </a>
                 <a
                   href="https://github.com/jitendragangwar123/AuraAsset"
@@ -477,6 +477,44 @@ Developed scalable blockchain solutions for NFT platforms and DeFi applications.
                 </a>
                 <a
                   href="https://luckylotto.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-400 hover:underline flex items-center gap-1"
+                >
+                  <ExternalLink size={16} />
+                  <span>Demo</span>
+                </a>
+              </div>
+            </div>
+
+            <div className="bg-slate-950 p-6 rounded-xl hover:bg-zinc-800/80 transition-all">
+              <h3 className="font-bold text-lg mb-2 text-teal-400">
+                Agentic Ethereum Hackathon Winner 🔥
+              </h3>
+              <p className="text-gray-400 mb-3">
+              Developed BaseAgentX, a next-gen autonomous AI agent harnessing Coinbase Agent Kit, OnchainKit, and EigenLayer AVS to revolutionize real-world asset investment.Proud winner of the AgentKit Pool Prize.
+              </p>
+              <div className="flex gap-4">
+                <a
+                  href="https://ethglobal.com/showcase/baseagentx-tsn9r"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-400 hover:underline flex items-center gap-1"
+                >
+                  <ExternalLink size={16} />
+                  <span>ETHGlobal</span>
+                </a>
+                <a
+                  href="https://github.com/jitendragangwar123/BaseAgentX"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-400 hover:underline flex items-center gap-1"
+                >
+                  <Github size={16} />
+                  <span>GitHub</span>
+                </a>
+                <a
+                  href="https://base-agent-x.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-green-400 hover:underline flex items-center gap-1"
