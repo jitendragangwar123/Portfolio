@@ -21,8 +21,9 @@ import StarknetBg from "@/assets/tech-bg/starknet-bg.jpg";
 import StellarBg from "@/assets/tech-bg/stellar-bg.jpg";
 import BaseBg from "@/assets/tech-bg/base-bg.png";
 import SeiBg from "@/assets/tech-bg/sei-bg.png";
+import SolanaBg from "@/assets/tech-bg/solana-bg.jpg";
 
-type CardVariant = "ethereum" | "starknet" | "diamante" | "stellar" | "base" | "sei" | "default";
+type CardVariant = "ethereum" | "starknet" | "diamante" | "stellar" | "base" | "sei" | "solana" | "default";
 
 export default function Home() {
   const [ethereumDialogOpen, setEthereumDialogOpen] = React.useState(false);
@@ -31,6 +32,8 @@ export default function Home() {
   const [stellarDialogOpen, setStellarDialogOpen] = React.useState(false);
   const [baseDialogOpen, setBaseDialogOpen] = React.useState(false);
   const [seiDialogOpen, setSeiDialogOpen] = React.useState(false);
+  const [solanaDialogOpen, setSolanaDialogOpen] = React.useState(false);
+
 
   const [certificationsDialogOpen, setCertificationsDialogOpen] =
     React.useState(false);
@@ -67,7 +70,7 @@ export default function Home() {
             Hi, I&apos;m Jitendra
           </h1>
           <p className="text-gray-400 text-sm sm:text-base">
-            Blockchain Developer with 2.6+ years of experience in leading and
+            Blockchain Developer with 3+ years of experience in leading and
             delivering high-impact projects in DeFi and infrastructure tooling
             with expertise in building secure smart contracts and scalable
             dApps.
@@ -107,7 +110,7 @@ export default function Home() {
                 "TypeScript",
                 "Node.js",
                 "MongoDB",
-                "MySQL",
+                "PostgreSQL",
                 "AWS",
               ]}
             />
@@ -130,7 +133,7 @@ export default function Home() {
                 "Remix",
                 "Foundry",
                 "Hardhat",
-                "Ganache",
+                "Anchor",
               ]}
             />
           </div>
@@ -224,6 +227,20 @@ export default function Home() {
           <p className="mb-4 text-sm sm:text-base">
             In the past month, I&apos;ve been immersing myself in the Sei Blockchain,
             exploring its innovative financial ecosystem firsthand.
+          </p>
+        </Card>
+
+        {/* Solana Blockchain Experience */}
+        <Card
+          className="col-span-1 sm:col-span-2 lg:col-span-1 bg-zinc-900"
+          onClick={() => setSolanaDialogOpen(true)}
+          viewAllButton={<ViewAllButton onClick={() => setSolanaDialogOpen(true)} />}
+          variant="solana"
+        >
+          <h2 className="text-xl sm:text-2xl font-bold mb-4">Solana</h2>
+          <p className="mb-4 text-sm sm:text-base">
+            For the past 6 months, I&apos;ve been working on Solana Blockchain,
+            developing high-performance smart contracts and dApps using Rust and Anchor.
           </p>
         </Card>
 
@@ -570,6 +587,13 @@ Developed scalable blockchain solutions for NFT platforms and DeFi applications.
       />
 
       <ViewAllDialog
+          title="Solana Projects"
+          items={solanaProjects}
+          open={solanaDialogOpen}
+          onOpenChange={setSolanaDialogOpen}
+        />
+
+      <ViewAllDialog
         title="All Certifications"
         items={certifications}
         open={certificationsDialogOpen}
@@ -598,6 +622,7 @@ function Card({
     stellar: StellarBg,
     base: BaseBg,
     sei: SeiBg,
+    solana: SolanaBg,
     default: null,
   }[variant];
 
@@ -946,6 +971,23 @@ const seiProjects = [
       "Empowering Merchants and Consumers with AI-Driven Crypto Payments for a Frictionless Financial Future.SeiAgentPay is a decentralized stablecoin payment system that allows users to make payments seamlessly using DAI, USDT, and USDC. It integrates an AI-powered recommendation system to suggest the best stablecoin based on transaction history and user behavior, ensuring cost-effective and efficient transactions.",
     github: "https://github.com/jitendragangwar123/SeiAgentPay",
     live: "https://sei-agent-pay.vercel.app/",
+  },
+];
+
+const solanaProjects = [
+  {
+    name: "Solana Vault",
+    description:
+      "A secure and scalable vault application on Solana, built using Rust and Anchor. Supports deposits, withdrawals, and vault locking mechanisms for managing user funds with high performance and low transaction costs.",
+    github: "https://github.com/jitendragangwar123/Solana-Blockchain-Bootcamp",
+    live: "https://github.com/jitendragangwar123/Solana-Blockchain-Bootcamp", 
+  },
+  {
+    name: "Solana Token Swap",
+    description:
+      "A decentralized token swap platform on Solana, enabling users to exchange custom tokens with low fees and high throughput. Built with Anchor and integrated with Solana's program-derived addresses (PDAs).",
+    github: "https://github.com/jitendragangwar123/Solana-Blockchain-Bootcamp",
+    live: "https://github.com/jitendragangwar123/Solana-Blockchain-Bootcamp", 
   },
 ];
 
