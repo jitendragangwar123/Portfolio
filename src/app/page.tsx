@@ -23,7 +23,15 @@ import BaseBg from "@/assets/tech-bg/base-bg.png";
 import SeiBg from "@/assets/tech-bg/sei-bg.png";
 import SolanaBg from "@/assets/tech-bg/solana-bg.jpg";
 
-type CardVariant = "ethereum" | "starknet" | "diamante" | "stellar" | "base" | "sei" | "solana" | "default";
+type CardVariant =
+  | "ethereum"
+  | "starknet"
+  | "diamante"
+  | "stellar"
+  | "base"
+  | "sei"
+  | "solana"
+  | "default";
 
 export default function Home() {
   const [ethereumDialogOpen, setEthereumDialogOpen] = React.useState(false);
@@ -33,7 +41,6 @@ export default function Home() {
   const [baseDialogOpen, setBaseDialogOpen] = React.useState(false);
   const [seiDialogOpen, setSeiDialogOpen] = React.useState(false);
   const [solanaDialogOpen, setSolanaDialogOpen] = React.useState(false);
-
 
   const [certificationsDialogOpen, setCertificationsDialogOpen] =
     React.useState(false);
@@ -70,7 +77,7 @@ export default function Home() {
             Hi, I&apos;m Jitendra
           </h1>
           <p className="text-gray-400 text-sm sm:text-base">
-            Blockchain Developer with 3+ years of experience in leading and
+            Blockchain Developer with 4+ years of experience in leading and
             delivering high-impact projects in DeFi and infrastructure tooling
             with expertise in building secure smart contracts and scalable
             dApps.
@@ -150,7 +157,7 @@ export default function Home() {
         >
           <h2 className="text-xl sm:text-2xl font-bold mb-4">Ethereum</h2>
           <p className="mb-4 text-sm sm:text-base">
-            I&apos;ve been involved with blockchain companies for over 2.6 years
+            I&apos;ve been involved with blockchain companies for over 3.8 years
             as an Ethereum Blockchain Developer.
           </p>
         </Card>
@@ -165,7 +172,7 @@ export default function Home() {
         >
           <h2 className="text-xl sm:text-2xl font-bold mb-4">Starknet</h2>
           <p className="mb-4 text-sm sm:text-base">
-            I&apos;ve spent the past 1+ years working with blockchain companies
+            I&apos;ve spent the past 2+ years working with blockchain companies
             as a Starknet Blockchain Developer.
           </p>
         </Card>
@@ -225,8 +232,8 @@ export default function Home() {
         >
           <h2 className="text-xl sm:text-2xl font-bold mb-4">Sei</h2>
           <p className="mb-4 text-sm sm:text-base">
-            In the past month, I&apos;ve been immersing myself in the Sei Blockchain,
-            exploring its innovative financial ecosystem firsthand.
+            In the past month, I&apos;ve been immersing myself in the Sei
+            Blockchain, exploring its innovative financial ecosystem firsthand.
           </p>
         </Card>
 
@@ -234,13 +241,16 @@ export default function Home() {
         <Card
           className="col-span-1 sm:col-span-2 lg:col-span-1 bg-zinc-900"
           onClick={() => setSolanaDialogOpen(true)}
-          viewAllButton={<ViewAllButton onClick={() => setSolanaDialogOpen(true)} />}
+          viewAllButton={
+            <ViewAllButton onClick={() => setSolanaDialogOpen(true)} />
+          }
           variant="solana"
         >
           <h2 className="text-xl sm:text-2xl font-bold mb-4">Solana</h2>
           <p className="mb-4 text-sm sm:text-base">
-            For the past 6 months, I&apos;ve been working on Solana Blockchain,
-            developing high-performance smart contracts and dApps using Rust and Anchor.
+            For the past 10 months, I&apos;ve been working on Solana Blockchain,
+            developing high-performance smart contracts and dApps using Rust and
+            Anchor.
           </p>
         </Card>
 
@@ -251,9 +261,16 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
             <WorkExperience
+              title="Senior Blockchain Developer"
+              company="Sportstech, Bangalore, India"
+              period="September 2025 - Present"
+              description="Building a DePIN protocol for health equipment. This innovative system is designed to reward users based on their physical activity, creating a direct incentive model that encourages healthier lifestyles."
+            />
+
+            <WorkExperience
               title="Blockchain Developer (R&D)"
               company="Sustainability Economics, Bangalore, India"
-              period="August 2023 - Present"
+              period="August 2023 - September 2025"
               description="Developing cutting-edge blockchain solutions to drive the Net-Zero Transition. Empowering industries with sustainable and scalable decentralized technologies."
             />
             <WorkExperience
@@ -470,8 +487,9 @@ Developed scalable blockchain solutions for NFT platforms and DeFi applications.
                 ETHIndia Hackathon Winner 🏆
               </h3>
               <p className="text-gray-400 mb-3">
-                Building LuckyLotto, a seamless blockchain-powered lottery platform revolutionizing the gaming experience,
-                and Won the Pool Prize from Coinbase.
+                Building LuckyLotto, a seamless blockchain-powered lottery
+                platform revolutionizing the gaming experience, and Won the Pool
+                Prize from Coinbase.
               </p>
               <div className="flex gap-4">
                 <a
@@ -509,7 +527,10 @@ Developed scalable blockchain solutions for NFT platforms and DeFi applications.
                 Agentic Ethereum Hackathon Winner 🔥
               </h3>
               <p className="text-gray-400 mb-3">
-              Developed BaseAgentX, a next-gen autonomous AI agent harnessing Coinbase Agent Kit, OnchainKit, and EigenLayer AVS to revolutionize real-world asset investment.Proud winner of the AgentKit Pool Prize.
+                Developed BaseAgentX, a next-gen autonomous AI agent harnessing
+                Coinbase Agent Kit, OnchainKit, and EigenLayer AVS to
+                revolutionize real-world asset investment.Proud winner of the
+                AgentKit Pool Prize.
               </p>
               <div className="flex gap-4">
                 <a
@@ -532,6 +553,37 @@ Developed scalable blockchain solutions for NFT platforms and DeFi applications.
                 </a>
                 <a
                   href="https://base-agent-x.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-400 hover:underline flex items-center gap-1"
+                >
+                  <ExternalLink size={16} />
+                  <span>Demo</span>
+                </a>
+              </div>
+            </div>
+            <div className="bg-slate-950 p-6 rounded-xl hover:bg-zinc-800/80 transition-all">
+              <h3 className="font-bold text-lg mb-2 text-teal-400">
+                WPI Hackathon Winner 🏆
+              </h3>
+              <p className="text-gray-400 mb-3">
+                Built an AI-powered diabetes app using TypeScript and Flask with
+                RAG for personalized insights, developed iOS features with Swift
+                and Apple HealthKit for real-time glucose tracking, and secured
+                $5K in seed funding.{" "}
+              </p>
+              <div className="flex gap-4">
+                <a
+                  href="hhttps://github.com/SugarSense-ai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-400 hover:underline flex items-center gap-1"
+                >
+                  <Github size={16} />
+                  <span>GitHub</span>
+                </a>
+                <a
+                  href="https://sugarsense.ai/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-green-400 hover:underline flex items-center gap-1"
@@ -587,11 +639,11 @@ Developed scalable blockchain solutions for NFT platforms and DeFi applications.
       />
 
       <ViewAllDialog
-          title="Solana Projects"
-          items={solanaProjects}
-          open={solanaDialogOpen}
-          onOpenChange={setSolanaDialogOpen}
-        />
+        title="Solana Projects"
+        items={solanaProjects}
+        open={solanaDialogOpen}
+        onOpenChange={setSolanaDialogOpen}
+      />
 
       <ViewAllDialog
         title="All Certifications"
@@ -630,7 +682,7 @@ function Card({
     <div
       className={cn(
         "bg-[linear-gradient(45deg,transparent_25%,rgba(68,68,68,.2)_50%,transparent_75%,transparent_100%)] bg-zinc-950 relative overflow-hidden rounded-3xl border border-slate-900 bg-[length:250%_250%,100%_100%] bg-[position:-100%_0,0_0] bg-no-repeat p-8 shadow-2xl transition-all duration-300 cursor-pointer group ",
-        className
+        className,
       )}
       onClick={onClick}
       {...props}
@@ -793,7 +845,9 @@ function ViewAllDialog({
               key={index}
               className="mb-6 p-4 bg-[rgb(20,20,20)] rounded-xl hover:bg-[rgb(30,30,30)] transition-colors"
             >
-              <h3 className="font-semibold text-white text-lg mb-2">{item.name}</h3>
+              <h3 className="font-semibold text-white text-lg mb-2">
+                {item.name}
+              </h3>
               <p className="text-gray-400 mb-3">{item.description}</p>
               <div className="flex gap-4">
                 {item.github && (
@@ -961,7 +1015,7 @@ const baseProjects = [
       "BaseAgentX is an autonomous AI agent built on Base, leveraging Coinbase Agent Kit, OnchainKit, and EigenLayer AVS to revolutionize real-world asset investment with AI-driven automation. 🧠🤖 Winner of the AgentKit Pool Prize 🏆 in the Agentic Ethereum Hackathon 🏅, hosted by ETHGlobal.",
     github: "https://github.com/jitendragangwar123/BaseAgentX",
     live: "https://base-agent-x.vercel.app/",
-  }
+  },
 ];
 
 const seiProjects = [
@@ -980,14 +1034,14 @@ const solanaProjects = [
     description:
       "A secure and scalable vault application on Solana, built using Rust and Anchor. Supports deposits, withdrawals, and vault locking mechanisms for managing user funds with high performance and low transaction costs.",
     github: "https://github.com/jitendragangwar123/Solana-Blockchain-Bootcamp",
-    live: "https://github.com/jitendragangwar123/Solana-Blockchain-Bootcamp", 
+    live: "https://github.com/jitendragangwar123/Solana-Blockchain-Bootcamp",
   },
   {
     name: "Solana Token Swap",
     description:
       "A decentralized token swap platform on Solana, enabling users to exchange custom tokens with low fees and high throughput. Built with Anchor and integrated with Solana's program-derived addresses (PDAs).",
     github: "https://github.com/jitendragangwar123/Solana-Blockchain-Bootcamp",
-    live: "https://github.com/jitendragangwar123/Solana-Blockchain-Bootcamp", 
+    live: "https://github.com/jitendragangwar123/Solana-Blockchain-Bootcamp",
   },
 ];
 
@@ -1061,7 +1115,7 @@ function Badge({ children, className, ...props }: BadgeProps) {
         "hover:border-blue-500 hover:bg-blue-500/10 hover:text-blue-400",
         "hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] hover:scale-105",
         "cursor-pointer",
-        className
+        className,
       )}
       {...props}
     >
@@ -1092,7 +1146,7 @@ const DialogOverlay = React.forwardRef<
     ref={ref}
     className={cn(
       "fixed inset-0 z-50 bg-background/80 backdrop-blur-sm transition-all duration-100 data-[state=closed]:animate-out data-[state=closed]:fade-out data-[state=open]:fade-in",
-      className
+      className,
     )}
     {...props}
   />
@@ -1109,7 +1163,7 @@ const DialogContent = React.forwardRef<
       ref={ref}
       className={cn(
         "fixed z-50 grid w-full gap-4 rounded-b-lg border bg-background p-6 shadow-lg animate-in data-[state=open]:fade-in-90 data-[state=open]:slide-in-from-bottom-10 sm:max-w-lg sm:rounded-lg sm:zoom-in-90 data-[state=open]:sm:slide-in-from-bottom-0",
-        className
+        className,
       )}
       {...props}
     >
@@ -1126,7 +1180,7 @@ const DialogHeader = ({
   <div
     className={cn(
       "flex flex-col space-y-1.5 text-center sm:text-left",
-      className
+      className,
     )}
     {...props}
   />
@@ -1140,7 +1194,7 @@ const DialogFooter = ({
   <div
     className={cn(
       "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
-      className
+      className,
     )}
     {...props}
   />
@@ -1155,7 +1209,7 @@ const DialogTitle = React.forwardRef<
     ref={ref}
     className={cn(
       "text-lg font-semibold leading-none tracking-tight",
-      className
+      className,
     )}
     {...props}
   />
